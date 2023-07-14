@@ -512,6 +512,7 @@ body {
 .load-more-container {
   text-align: center;
   margin-top: 25px;
+  margin-bottom: 40px;
 }
 
 .load-more-button {
@@ -667,11 +668,11 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .social-icons {
     margin-top: 10px;
   }
-  
+
   .right {
     flex-direction: column;
   }
@@ -687,6 +688,8 @@ footer {
   margin: 0 auto;
 }
 
+
+
 .explore-box {
   position: relative;
   display: inline-block;
@@ -695,6 +698,7 @@ footer {
   overflow: hidden;
   border-radius: 30px;
   cursor: pointer;
+  max-height: 200px;
 }
 
 .explore-box .title {
@@ -707,6 +711,10 @@ footer {
   left: 0;
   width: 100%;
   z-index: 50;
+}
+
+.explore-box:hover .title {
+  display: none;
 }
 
 .explore-box .main-image {
@@ -745,11 +753,13 @@ footer {
     max-width: 100%;
     margin: 10px;
   }
+
   .explore-box .hover-images img {
     flex: 0 0 100%;
     width: 100%;
     height: 100%;
   }
+
   .explore-box .title {
     font-size: 14px;
   }
@@ -776,13 +786,9 @@ footer {
   height: auto;
   margin-right: 10px;
   position: relative;
+  height: 200px;
 }
 
-@media only screen and (max-width: 769px) {
-  .top-box {
-    width: 100px;
-  }
-}
 
 .top-box img {
   width: 100%;
@@ -795,6 +801,21 @@ footer {
 .top-title {
   text-align: center;
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.584);
+  width: 100%;
+  bottom: auto;
+  padding: 10px;
+
+}
+@media only screen and (max-width: 769px) {
+  .top-box {
+    width: 100px;
+    height: 100px;
+  }
+  .top-title {
+    font-size: 12px;
+    bottom: auto;
+  }
 }
 
 
@@ -851,6 +872,9 @@ section {
 section h2 {
   color: #333;
 }
+h2 {
+  color: greenyellow;
+}
 
 .owner {
   display: flex;
@@ -902,7 +926,8 @@ section h2 {
   .contact-info div {
     margin: 10px 0;
   }
-  .contact-info p{ 
+
+  .contact-info p {
     font-size: 20px;
   }
 }
@@ -949,18 +974,160 @@ section h2 {
 /* Add responsive styles for smaller screens */
 @media screen and (max-width: 600px) {
   .contact-info .form-element {
-      width: 100%;
+    width: 100%;
   }
 }
 
 
-p{
+p {
   font-size: 20px;
 }
 
-.about-title{
+.about-title {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
   color: greenyellow;
+}
+
+
+
+
+/* table css */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #797777;
+}
+
+th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+tr td a {
+  color: white;
+}
+
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  /*
+Label the data
+*/
+  td:nth-of-type(1):before {
+    content: "First Name";
+  }
+
+  td:nth-of-type(2):before {
+    content: "Last Name";
+  }
+
+  td:nth-of-type(3):before {
+    content: "Job Title";
+  }
+
+  td:nth-of-type(4):before {
+    content: "Favorite Color";
+  }
+
+  td:nth-of-type(5):before {
+    content: "Wars of Trek?";
+  }
+
+  td:nth-of-type(6):before {
+    content: "Date of Birth";
+  }
+
+  td:nth-of-type(7):before {
+    content: "Dream Vacation City";
+  }
+
+  td:nth-of-type(8):before {
+    content: "GPA";
+  }
+
+  td:nth-of-type(9):before {
+    content: "Arbitrary Data";
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    padding: 0;
+    margin: 0;
+    width: 320px;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    width: 495px;
+  }
+}
+
+
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

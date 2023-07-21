@@ -65,7 +65,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="./challenge.html">Challenge</a></li>
                             <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./upload.html">Upload</a></li>
+                            <li><a href="#">Option 3</a></li>
                         </ul>
                     </div>
                 </div>
@@ -75,91 +75,39 @@
             </nav>
             <!-- play video in loop -->
 
-            <div class="video-container">
-                <video src="./Assets/videos/video.mp4" autoplay loop></video>
-                <!-- <img src="./Assets/images/DSC_0229.jpg" alt=""> -->
-                <div class="text-on-videos">
-                    <h1>Blog</h1>
-                    <!-- <p>Video Description</p> -->
+         
+
+            <div class="container" style="height: 100vh; padding: 0px; border: 2px dotted white;">
+                <!-- ... (previous code) ... -->
+
+                <div class="upload-container">
+                    <h2>Upload Your Image</h2>
+                    <form action="/upload" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="image">Choose Image:</label>
+                            <input type="file" id="image" name="image" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title:</label>
+                            <input type="text" id="title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description" rows="4" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="tags">Tags:</label>
+                            <input type="text" id="tags" name="tags" required>
+                            <p class="tag-hint">Separate tags with commas (e.g., nature, landscape, vacation)</p>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Upload</button>
+                        </div>
+                    </form>
                 </div>
 
-            </div>
+                <!-- ... (rest of the code) ... -->
 
-            <div class="container">
-                <div class="blog-section">
-                    <div class="blog-title-subtitle">
-                        <h1>Popular Stories</h1>
-                        <p>This week's most-read stories</p>
-                    </div>
-                    <div class="blog-post">
-                        <div class="blog-image">
-                            <img src="./Assets/images/20190619_180532.jpg" alt="Blog Image 1">
-                        </div>
-                        <div class="blog-content">
-                            <h2>Blog Post Title 1</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, amet culpa unde modi libero
-                                totam, sit blanditiis quaerat neque a voluptatem expedita suscipit omnis repudiandae
-                                consequuntur vel in ducimus commodi.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-post">
-                        <div class="blog-content">
-                            <h2>Blog Post Title 2</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas recusandae possimus
-                                aspernatur eligendi dolor. Nesciunt fuga distinctio tempore amet, id autem rerum?
-                                Explicabo, sint! Nemo libero rerum accusantium deleniti exercitationem.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                        <div class="blog-image">
-                            <img src="./Assets/images/20191013_182012.jpg" alt="Blog Image 2">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="new-story">
-                    <div class="blog-title-subtitle">
-                        <h1>Popular Stories</h1>
-                        <p>This week's most-read stories</p>
-                    </div>
-                    <div class="popular-story">
-                        <div class="story">
-                            <div class="ps-image">
-                                <img src="./Assets/images/20191027_163830-01.jpeg" alt="Story 1" class="story-image">
-                            </div>
-                            <div class="ps-title">
-                                <h3 class="story-title">Story 1 Title</h3>
-                            </div>
-                        </div>
-                        <div class="story">
-                            <div class="ps-image">
-                                <img src="./Assets/images/20191027_163830-01.jpeg" alt="Story 1" class="story-image">
-                            </div>
-                            <div class="ps-title">
-                                <h3 class="story-title">Story 1 Title</h3>
-                            </div>
-                        </div>
-                        <div class="story">
-                            <div class="ps-image">
-                                <img src="./Assets/images/20191027_163830-01.jpeg" alt="Story 1" class="story-image">
-                            </div>
-                            <div class="ps-title">
-                                <h3 class="story-title">Story 1 Title</h3>
-                            </div>
-                        </div>
-                        <div class="story">
-                            <div class="ps-image">
-                                <img src="./Assets/images/20191027_163830-01.jpeg" alt="Story 1" class="story-image">
-                            </div>
-                            <div class="ps-title">
-                                <h3 class="story-title">Story 1 Title</h3>
-                            </div>
-                        </div>
-    
-                        <!-- Add more story elements as needed -->
-                    </div>
-
-                </div>
 
                 <footer>
                     <div class="left">

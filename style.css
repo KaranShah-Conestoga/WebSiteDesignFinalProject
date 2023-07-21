@@ -30,6 +30,12 @@ body {
   z-index: 50;
 }
 
+@media (max-width: 768px) {
+  .left-container {
+    box-shadow: none;
+  }
+}
+
 .menu {
   display: none;
 }
@@ -61,7 +67,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 100;
- 
+
 }
 
 nav {
@@ -223,6 +229,18 @@ p {
   width: 30%;
 }
 
+@media (max-width: 768px) {
+  .type-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .type-options {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
 .type-container .type-options ul {
   display: flex;
   width: 100%;
@@ -266,7 +284,7 @@ p {
   position: relative;
   padding: 20px;
   box-sizing: border-box;
-  
+
 }
 
 .search-label {
@@ -1419,7 +1437,7 @@ img {
   align-items: center;
 }
 
-.ps-image{
+.ps-image {
   width: 210px;
   height: 250px;
   overflow: hidden;
@@ -1429,4 +1447,99 @@ img {
 .story-title {
   margin-top: 10px;
   font-size: 18px;
+}
+
+
+/* Blog page end */
+
+/* upload page */
+
+/* ... (previous code) ... */
+
+.upload-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.upload-container h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tag-hint {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* ... (rest of the CSS) ... */
+
+/* licence page */
+
+.licence-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.licence-container h2 {
+  margin-bottom: 20px;
+}
+
+.licence-container p {
+  margin-bottom: 20px;
+}
+
+.allowed-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.allowed-container h5,
+.notallowed-container h5 {
+  padding: 25px 0px;
+  border: 3px dotted #333;
+  width: 100%;
+}
+
+.allowed-container h3,
+.notallowed-container h3 {
+  padding: 25px 0px;
+  color: greenyellow;
+  width: 100%;
 }

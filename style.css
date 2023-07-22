@@ -8,6 +8,7 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+
 }
 
 .main-container {
@@ -67,7 +68,9 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 100;
-
+  background-image: url("./Assets/pngs/pngwing.com\(27\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 nav {
@@ -157,6 +160,13 @@ nav {
   cursor: pointer;
   /* padding-right: 55px; */
   width: 100%;
+}
+
+.dropdown-menu li a:hover {
+  color: #007bff ;
+  border-bottom: none;
+  width: 100%;
+  padding: auto;
 }
 
 .nav-list a:hover {
@@ -284,7 +294,7 @@ p {
   position: relative;
   padding: 20px;
   box-sizing: border-box;
-
+ 
 }
 
 .search-label {
@@ -1513,6 +1523,9 @@ img {
   padding: 20px;
   text-align: center;
 }
+.challenge-container{
+  text-align: center;
+}
 
 .licence-container h2 {
   margin-bottom: 20px;
@@ -1528,6 +1541,11 @@ img {
   align-items: center;
   margin-bottom: 20px;
   flex-direction: column;
+}
+.allowed-container,
+.notallowed-container {
+  box-shadow: 0 0 20px white;
+  background-color: #292929a1;
 }
 
 .allowed-container h5,

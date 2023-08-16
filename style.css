@@ -1062,6 +1062,13 @@ p {
 table {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 30px;
+}
+.pexel-link{
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* Zebra striping */
